@@ -146,7 +146,6 @@ div input:focus {
 
 .img-container {
     width: 100%;
-
     /* Faz com que o contêiner da imagem não tente crescer, preservando seu tamanho */
     max-width: 90rem;
     /* Garante que a imagem fique centralizada dentro de seu contêiner de 40% */
@@ -154,12 +153,9 @@ div input:focus {
 }
 
 .img-principal {
-    /* Essas regras que você já tinha estão PERFEITAS para a imagem: */
     max-width: 100%;
-    /* Não deixa ela sair do .img-container */
     height: auto;
     display: block;
-    /* 📌 Dica: Adiciona um arredondamento sutil na borda para um toque a mais */
     border-radius: 0.5rem;
 }
 
