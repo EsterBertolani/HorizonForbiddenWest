@@ -202,7 +202,7 @@ article:hover {
 }
 
 article h2 {
-    margin-top: 0;
+    margin-top: 2rem;
     /* Remove a margem superior */
     font-weight: 600;
     /* Peso da fonte */
@@ -212,7 +212,7 @@ article h2 {
     /* Sem borda inferior */
     padding-bottom: 0;
     /* Sem espaçamento interno inferior */
-    margin-bottom: 0.25rem;
+    /* margin-bottom: 0.25rem; */
     /* Margem inferior */
     color: var(--primary-color);
     /* Cor do texto */
