@@ -1,26 +1,32 @@
 [
-{
-    "nome": "Máquinas",
-    "descricao": "Explore um mundo pós-apocalíptico habitado por máquinas colossais, desde os ágeis Vigias até os imponentes Tirânicos."
-},
-{
-    "nome": "Tribos",
-    "descricao": "Conheça as diversas tribos que habitam o mundo de Horizon Forbidden West, cada uma com sua cultura única e habilidades especiais."
-},
-{
-    "nome": "Ruínas Antigas",
-    "descricao": "Descubra as ruínas de uma civilização perdida, repletas de segredos e tecnologias antigas que moldaram o mundo atual."
-},
-{
-    "nome": "Personagens",
-    "descricao": "Descubra os personagens fascinantes que compõem a narrativa de Horizon Forbidden West, cada um com sua história e motivações."
-},
-{
-    "nome": "Ambientes",
-    "descricao": "Mergulhe em ambientes deslumbrantes, desde florestas exuberantes até desertos áridos, cada um repleto de detalhes impressionantes."
-},
-{
-    "nome": "Armas e Equipamentos",
-    "descricao": "Conheça as diversas armas e equipamentos disponíveis para Aloy, desde arcos tradicionais até dispositivos tecnológicos avançados."
-}
+    {
+        "nome": "Máquinas",
+        "descricao": "Explore um mundo pós-apocalíptico habitado por máquinas colossais.",
+        "imagem": "https://placehold.co/100x100/orange/white?text=M" 
+    },
+    {
+        "nome": "Tribos",
+        "descricao": "Conheça as diversas tribos, cada uma com sua cultura única.",
+        "imagem": "https://placehold.co/100x100/blue/white?text=T"
+    },
+    {
+        "nome": "Ruínas Antigas",
+        "descricao": "Descubra as ruínas de uma civilização perdida e segredos tecnológicos.",
+        "imagem": "https://placehold.co/100x100/purple/white?text=R"
+    },
+    {
+        "nome": "Personagens",
+        "descricao": "Descubra os personagens fascinantes que compõem a narrativa.",
+        "imagem": "https://placehold.co/100x100/green/white?text=P"
+    },
+    {
+        "nome": "Ambientes",
+        "descricao": "Mergulhe em ambientes deslumbrantes, de florestas a desertos.",
+        "imagem": "https://placehold.co/100x100/red/white?text=A"
+    },
+    {
+        "nome": "Armas",
+        "descricao": "Conheça as diversas armas e equipamentos disponíveis para Aloy.",
+        "imagem": "https://placehold.co/100x100/grey/white?text=W"
+    }
 ]

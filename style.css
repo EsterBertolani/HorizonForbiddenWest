@@ -7,17 +7,23 @@
 }
 
 :root {
-    --primary-color: #8ab4f8;
+    --bg-color: #202124;
+    /* Cor de fundo (cinza escuro) */
+    --primary-color: #e8eaed;
     /* Cor primária (azul claro) */
     --secondary-color: #e8eaed;
     /* Cor secundária (cinza claro) */
     --tertiary-color: #9aa0a6;
     /* Cor terciária (cinza médio) */
-    --bg-color: #202124;
-    /* Cor de fundo (cinza escuro) */
+    --focus: #00d9ff;
+
+
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     /* Remove a margem padrão do body */
     background: var(--bg-color);
@@ -131,12 +137,21 @@ div input:focus {
 }
 
 #botao-busca:hover {
-    background-color: var(--primary-color);
-    /* Muda a cor de fundo ao passar o mouse */
-    color: var(--bg-color);
-    /* Muda a cor do texto ao passar o mouse */
-    box-shadow: 0 0 0 0.1rem var(--primary-color);
-    /* Adiciona uma sombra de caixa */
+    background-color: rgba(0, 217, 255, 0.1);
+    /* Fundo azul bem fraquinho */
+    color: var(--focus);
+    /* Texto ciano neon */
+    border-color: var(--focus);
+    /* Borda brilhante */
+
+    transform: translateY(-2px) scale(1.05);
+    /* Pulo e leve aumento */
+    cursor: pointer;
+
+    /* O brilho holográfico igual ao das cartas */
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.4),
+        inset 0 0 5px rgba(0, 217, 255, 0.2);
 }
 
 #botao-busca:active {
@@ -144,12 +159,32 @@ div input:focus {
     /* Efeito de clique (diminui o tamanho) */
 }
 
-.img-container {
+.hero-container {
     width: 100%;
     /* Faz com que o contêiner da imagem não tente crescer, preservando seu tamanho */
     max-width: 90rem;
     /* Garante que a imagem fique centralizada dentro de seu contêiner de 40% */
+    position: relative;
+    text-align: right;
     margin: 0;
+}
+
+.hero-container figcaption {
+    font-size: 0.8rem;
+    color: var(--tertiary-color);
+    margin-top: 0.5rem;
+    font-style: italic;
+    opacity: 0.8;
+    padding-right: 5px;
+}
+
+.hero-container figcaption a {
+    color: var(--focus);
+    text-decoration: none;
+}
+
+.hero-container figcaption a:hover {
+    text-decoration: underline;
 }
 
 .img-principal {
@@ -160,100 +195,118 @@ div input:focus {
 }
 
 main {
+    flex: 1;
+    width: 100%;
     max-width: 90rem;
     /* Largura máxima do conteúdo principal */
-    margin: 0 auto;
+    margin: 2rem auto 4rem auto;
     /* Centraliza o conteúdo principal horizontalmente */
     margin-top: 2rem;
     /* Margem no topo */
-    height: calc(100vh - 10rem - 4rem);
+    /* height: calc(100vh - 10rem - 4rem); */
     /* Calcula a altura para preencher o espaço restante da tela */
     overflow-y: scroll;
     /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
     scrollbar-width: none;
 }
 
-article {
-    background: none;
-    /* Sem cor de fundo */
-    border-radius: 0;
-    /* Sem bordas arredondadas */
-    padding: 0;
-    /* Remove o padding */
-    padding: 0 1rem;
-    /* Espaçamento interno nos lados */
-    margin-bottom: 1.25rem;
-    /* Margem inferior */
-    box-shadow: none;
-    /* Sem sombra */
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-    /* Transição suave */
-    border-bottom: 1px solid var(--bg-color);
-    /* Borda inferior */
-    padding-bottom: 1.5rem;
-    /* Espaçamento interno inferior */
-}
-
-article:hover {
-    transform: scale(1.01);
-    /* Aumenta ligeiramente o tamanho ao passar o mouse */
-    cursor: pointer;
-    /* Muda o cursor para uma mão */
-}
-
-article h2 {
-    margin-top: 2rem;
-    /* Remove a margem superior */
-    font-weight: 600;
-    /* Peso da fonte */
-    font-size: 1.6rem;
-    /* Tamanho da fonte */
-    border-bottom: none;
-    /* Sem borda inferior */
-    padding-bottom: 0;
-    /* Sem espaçamento interno inferior */
-    /* margin-bottom: 0.25rem; */
-    /* Margem inferior */
-    color: var(--primary-color);
-    /* Cor do texto */
-}
-
-article p {
-    margin: 0.5rem 0;
-    /* Margem superior e inferior */
+article p,
+section p {
     line-height: 1.6;
-    /* Altura da linha para melhor legibilidade */
-    font-size: 1rem;
-    /* Tamanho da fonte */
-    margin-bottom: 0.5rem;
-    /* Margem inferior */
+    letter-spacing: 0.02rem;
+    margin-bottom: 1.6rem;
     color: var(--secondary-color);
-    /* Cor do texto */
 }
 
-article p strong {
-    color: var(--tertiary-color);
-    /* Cor do texto em negrito */
-    font-weight: 400;
-    /* Peso da fonte */
+#features ul {
+    list-style: none;
+    padding-left: 1rem;
 }
 
-article a {
+#features li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+#features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--focus);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 217, 255, 0.6);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem 2rem;
+    padding: 4rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+article.card {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: none;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+article.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--focus);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3),
+        inset 0 0 10px rgba(0, 217, 255, 0.1);
+}
+
+article.card:hover .card-img {
+    border-color: var(--focus);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+}
+
+.card-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid var(--bg-color);
+    background-color: var(--bg-color);
+    z-index: 2;
+}
+
+article.card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
     color: var(--primary-color);
-    /* Cor do link */
-    text-decoration: none;
-    /* Remove o sublinhado padrão */
-    font-weight: 200;
-    /* Peso da fonte */
+    border: none;
 }
 
-article a:hover {
-    text-decoration: underline;
-    /* Adiciona sublinhado ao passar o mouse */
+article.card p {
+    font-size: 0.95rem;
+    color: var(--tertiary-color);
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     /* Posicionamento absoluto em relação ao elemento pai posicionado */
     bottom: 0;
     /* Alinha na parte inferior */
