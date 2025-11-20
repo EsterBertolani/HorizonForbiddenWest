@@ -4,7 +4,7 @@ let dados = [];
 
 async function carregarDados() {
     try {
-        const response = await fetch("data.json");
+        const response = await fetch("../data/p-data.json");
         dados = await response.json();
         renderizarCards(dados);
     } catch (error) {
@@ -63,7 +63,7 @@ function renderizarCards(dados) {
         let imagemSrc = dado.imagem ? dado.imagem : "https://placeholder.com/100";
 
         article.innerHTML = `
-            <a href="detalhes.html?categoria=${dado.nome}" class="card-link-wrapper">
+            <a href="../detalhes/detalhes.html?categoria=${dado.nome}" class="card-link-wrapper">
                 <img src="${imagemSrc}" alt="${dado.nome}" class="card-img"/>
                 <div class="card-content">
                     <h2>${dado.nome}</h2>
