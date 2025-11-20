@@ -63,9 +63,13 @@ function renderizarCards(dados) {
         let imagemSrc = dado.imagem ? dado.imagem : "https://placeholder.com/100";
 
         article.innerHTML = `
-            <img src="${imagemSrc}" alt="${dado.nome}" class="card-img"/>
-            <h2>${dado.nome}</h2>
-            <p>${dado.descricao}</p>
+            <a href="detalhes.html?categoria=${dado.nome}" class="card-link-wrapper">
+                <img src="${imagemSrc}" alt="${dado.nome}" class="card-img"/>
+                <div class="card-content">
+                    <h2>${dado.nome}</h2>
+                    <p>${dado.descricao}</p>
+                </div>
+            </a>
         `
         cardContainer.appendChild(article);
     }

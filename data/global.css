@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* Importa a fonte Quicksand do Google Fonts */
+
+* {
+    box-sizing: border-box;
+    /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+:root {
+    --bg-color: #202124;
+    /* Cor de fundo (cinza escuro) */
+    --primary-color: #e8eaed;
+    --secondary-color: #e8eaed;
+    /* Cor primária/secundária (cinza claro) */
+    --tertiary-color: #9aa0a6;
+    /* Cor terciária (cinza médio) */
+    --focus: #00d9ff;
+}
