@@ -10,23 +10,13 @@
         "imagem": "https://placehold.co/100x100/blue/white?text=T"
     },
     {
-        "nome": "Ruínas Antigas",
-        "descricao": "Descubra as ruínas de uma civilização perdida e segredos tecnológicos.",
-        "imagem": "https://placehold.co/100x100/purple/white?text=R"
-    },
-    {
-        "nome": "Personagens",
-        "descricao": "Descubra os personagens fascinantes que compõem a narrativa.",
-        "imagem": "https://placehold.co/100x100/green/white?text=P"
-    },
-    {
         "nome": "Ambientes",
         "descricao": "Mergulhe em ambientes deslumbrantes, de florestas a desertos.",
         "imagem": "https://placehold.co/100x100/red/white?text=A"
     },
     {
-        "nome": "Armas",
-        "descricao": "Conheça as diversas armas e equipamentos disponíveis para Aloy.",
-        "imagem": "https://placehold.co/100x100/grey/white?text=W"
+        "nome": "Personagens",
+        "descricao": "Descubra os personagens fascinantes que compõem a narrativa.",
+        "imagem": "https://placehold.co/100x100/green/white?text=P"
     }
 ]
