@@ -84,7 +84,6 @@ div input:focus {
 
 #botao-busca:active {
     transform: scale(0.98);
-    /* Efeito de clique (diminui o tamanho) */
 }
 
 .btn-voltar {
@@ -116,10 +115,15 @@ div input:focus {
 }
 
 .iconeG {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 2px solid var(--tertiary-color);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--focus);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--focus);
     overflow: hidden;
     transition: transform 0.5s ease, border-color 0.5s ease;
 }
@@ -136,151 +140,168 @@ div input:focus {
     object-fit: cover;
 }
 
+/* Container Principal (Grid) */
 .lista-vertical {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+/* O Cartão (Container Individual) */
+.item-card {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 100%;
-}
-
-.item-horizontal {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(30, 30, 30, 0.6);
     border: 1px solid var(--tertiary-color);
-    border-radius: 12px;
-    padding: 1rem;
-    gap: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
     transition: all 0.3s ease;
+    height: fit-content; /* A altura se adapta ao abrir/fechar */
 }
 
-.item-horizontal:hover {
-    border-color: #00d9ff;
-    background: rgba(0, 217, 255, 0.05);
-    transform: translateX(10px);
-    /* Move levemente para a direita */
+.item-card:hover {
+    border-color: var(--focus);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.item-img-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+/* --- PARTE 1: Cabeçalho (Sempre Visível) --- */
+.card-header-view {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Área da Imagem */
+.card-image-wrapper {
+    width: 100%;
+    height: 150px; /* Altura fixa para alinhar */
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-img-full {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 2px solid #555;
+    transition: transform 0.5s ease;
 }
 
-.section-title {
+.item-card:hover .item-img-full {
+    transform: scale(1.1); /* Zoom suave */
+}
+
+/* Tag Flutuante (Tipo da Máquina) */
+.tag-floating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--focus);
+    color: var(--focus);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* Título e Botão */
+.card-preview-info {
+    padding: 1rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
-    padding-left: 1rem;
 }
 
-.iconeG {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--focus);
+.card-preview-info h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* --- PARTE 2: Detalhes (Escondidos Inicialmente) --- */
+.card-details-hidden {
+    max-height: 0; 
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Classe ATIVA: Quando o JS adiciona essa classe, o card abre */
+.item-card.active .card-details-hidden {
+    max-height: 500px; 
+    opacity: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* --- Elementos Internos --- */
+.btn-toggle {
+    background: none;
+    border: none;
+    color: var(--focus);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--focus);
-}
-
-.lista-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 800px;
-}
-
-.item-horizontal {
-    display: flex;
-    align-items: center;
-    background: rgba(30, 30, 30, 0.6);
-    border: 1px solid var(--tertiary-color);
-    border-radius: 12px;
-    padding: 1rem;
-    gap: 1.5rem;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.item-horizontal:hover {
-    transform: translateX(10px);
-    border-color: var(--focus);
-}
-
-.item-img {
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--bg-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.item-info h3 {
-    margin: 0 0 0.3rem 0;
-    color: var(--primary-color);
+.item-card:hover .btn-toggle {
+    background: rgba(0, 217, 255, 0.1);
 }
 
-.item-header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 0.5rem;
+/* Gira a seta quando ativo */
+.item-card.active .btn-toggle {
+    transform: rotate(180deg);
+    background: var(--focus);
+    color: #000;
 }
 
-.tag {
-    font-size: 0.75rem;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.tag.tipo {
-    background-color: rgba(0, 217, 255, 0.15);
-    color: #00d9ff;
-    border: 1px solid #00d9ff;
-}
-
-.tag.caldeirao {
-    background-color: rgba(255, 165, 0, 0.15);
-    color: orange;
-    border: 1px solid orange;
-}
-
+/* Descrição e Tags */
 .descricao {
     color: #ccc;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.status-container {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 8px;
     font-size: 0.85rem;
+    line-height: 1.5;
 }
 
-.info-extra {
-    margin: 5px 0;
-    color: #ddd;
+.item-status {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.8rem;
 }
 
 .info-extra strong {
     color: var(--focus);
 }
 
-.item-info p {
-    margin: 0.5rem 0 0 0;
-    font-size: 1rem;
-    color: var(--tertiary-color);
-    margin-bottom: 8px;
+.tag.caldeirao {
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: rgba(255, 165, 0, 0.15);
+    color: orange;
+    border: 1px solid orange;
+    width: fit-content;
 }

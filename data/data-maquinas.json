@@ -4,8 +4,8 @@
     "tipo": "Aquisição",
     "caldeirao": "TAU",
     "descricao": "Máquina de rebanho equipada com presas poderosas para escavar sucata. Quando provocada, pode desenterrar recursos valiosos ou usar ataques elementais com as latas presas às suas costas.",
-    "fraquezas": "Dano de Choque",
-    "pontos_fortes": "Dano Ácido, Dano de Fogo",
+    "fraquezas": "Choque",
+    "pontos_fortes": "Ácido, Fogo",
     "img": "https://placehold.co/80"
   },
   {
@@ -13,8 +13,8 @@
     "tipo": "Reconhecimento",
     "caldeirao": "MU",
     "descricao": "Uma máquina de reconhecimento comum que emite um som agudo para alertar aliados e atordoar inimigos. Ela pode cavar túneis subterrâneos e ressurgir em locais inesperados para ataques surpresa.",
-    "fraquezas": "Dano de Fogo",
-    "pontos_fortes": "Dano de Fogo, Gelo, Ácido, Enxarque",
+    "fraquezas": "Fogo",
+    "pontos_fortes": "Fogo, Gelo, Ácido, Enxarque",
     "img": "https://placehold.co/80"
   },
   {
@@ -22,8 +22,8 @@
     "tipo": "Aquisição",
     "caldeirao": "CHI",
     "descricao": "Limpador ágil e agressivo que usa garras e cauda para escalar verticalmente com facilidade. Tende a atacar em grupos, lançando sucata e ataques de fogo contra ameaças.",
-    "fraquezas": "Dano de Enxarque",
-    "pontos_fortes": "Dano de Fogo, Dano de Plasma",
+    "fraquezas": "Enxarque",
+    "pontos_fortes": "Fogo, Plasma",
     "img": "https://placehold.co/80"
   },
   {
@@ -31,8 +31,8 @@
     "tipo": "Combate",
     "caldeirao": "IOTA",
     "descricao": "Máquina de combate veloz e bípede, equipada com lâminas afiadas como navalhas e mandíbulas poderosas. É capaz de cobrir grandes distâncias rapidamente para desferir golpes letais.",
-    "fraquezas": "Dano de Choque",
-    "pontos_fortes": "Dano de Ácido, Dano de Fogo",
+    "fraquezas": "Choque",
+    "pontos_fortes": "Ácido, Fogo",
     "img": "https://placehold.co/80"
   },
   {
@@ -40,8 +40,8 @@
     "tipo": "Combate",
     "caldeirao": "KAPPA",
     "descricao": "Uma formidável máquina voadora semelhante a um morcego. Utiliza efeitos de status, bombas elementais e um sistema de camuflagem avançado para se tornar invisível durante o combate.",
-    "fraquezas": "Dano de Fogo",
-    "pontos_fortes": "Dano de Gelo, Choque, Ácido",
+    "fraquezas": "Fogo",
+    "pontos_fortes": "Gelo, Choque, Ácido",
     "img": "https://placehold.co/80"
   },
   {
@@ -49,8 +49,8 @@
     "tipo": "Aquisição",
     "caldeirao": "MU",
     "descricao": "Máquina de rebanho semelhante a um cervo. Embora geralmente pacífica, possui chifres capazes de disparar projéteis de fogo à distância quando se sente ameaçada.",
-    "fraquezas": "Dano de Gelo",
-    "pontos_fortes": "Dano de Fogo",
+    "fraquezas": "Gelo",
+    "pontos_fortes": "Fogo",
     "img": "https://placehold.co/80"
   },
   {
@@ -58,8 +58,8 @@
     "tipo": "Combate",
     "caldeirao": "TAU",
     "descricao": "Uma variante de combate do Arante, modificada com lançadores de armas pesadas. É projetada para defender outras máquinas agressivamente com ataques incendiários.",
-    "fraquezas": "Dano de Enxarque, Ácido",
-    "pontos_fortes": "Dano de Fogo, Choque",
+    "fraquezas": "Enxarque, Ácido",
+    "pontos_fortes": "Fogo, Choque",
     "img": "https://placehold.co/80"
   },
   {
@@ -67,8 +67,8 @@
     "tipo": "Transporte",
     "caldeirao": "IOTA",
     "descricao": "Máquina de transporte ágil inspirada em cangurus. Utiliza uma garra de carga extensível para ataques à média distância e carrega cápsulas de recursos em sua bolsa ventral.",
-    "fraquezas": "Dano de Enxarque",
-    "pontos_fortes": "Dano de Choque",
+    "fraquezas": "Enxarque",
+    "pontos_fortes": "Choque",
     "img": "https://placehold.co/80"
   },
   {
@@ -76,8 +76,8 @@
     "tipo": "Aquisição",
     "caldeirao": "TAU",
     "descricao": "Máquina robusta que revolve a terra com seus chifres, deixando um rastro de sementes e poeira. A nuvem de poeira que cria pode ser usada estrategicamente para cobertura furtiva.",
-    "fraquezas": "Dano Ácido",
-    "pontos_fortes": "Dano de Gelo, Enxarque",
+    "fraquezas": "Ácido",
+    "pontos_fortes": "Gelo, Enxarque",
     "img": "https://placehold.co/80"
   },
   {
@@ -85,8 +85,8 @@
     "tipo": "Transporte",
     "caldeirao": "IOTA",
     "descricao": "Máquina fortemente blindada capaz de se enrolar em uma esfera de metal. Realiza ataques de atropelamento em alta velocidade e pode ejetar suas placas de armadura como projéteis.",
-    "fraquezas": "Dano de Ácido",
-    "pontos_fortes": "Dano de Gelo, Choque",
+    "fraquezas": "Ácido",
+    "pontos_fortes": "Gelo, Choque",
     "img": "https://placehold.co/80"
   },
   {
@@ -94,8 +94,8 @@
     "tipo": "Aquisição",
     "caldeirao": "MU",
     "descricao": "Pequeno limpador ágil que atua em bandos. Especializado em desmantelar máquinas destruídas, defende-se com mordidas rápidas e ataques de choque à distância.",
-    "fraquezas": "Dano de Gelo, Ácido",
-    "pontos_fortes": "Dano de Gelo",
+    "fraquezas": "Gelo, Ácido",
+    "pontos_fortes": "Gelo",
     "img": "https://placehold.co/80"
   },
   {
@@ -103,8 +103,8 @@
     "tipo": "Combate",
     "caldeirao": "CHI",
     "descricao": "Máquina colossal com uma carapaça impenetrável. Pode se enterrar no solo para emboscadas camufladas e utiliza canhões de gelo pressurizado para congelar seus alvos.",
-    "fraquezas": "Dano de Fogo, Ácido",
-    "pontos_fortes": "Dano de Gelo, Plasma",
+    "fraquezas": "Fogo, Ácido",
+    "pontos_fortes": "Gelo, Plasma",
     "img": "https://placehold.co/80"
   },
   {
@@ -112,8 +112,8 @@
     "tipo": "Reconhecimento",
     "caldeirao": "IOTA",
     "descricao": "Vigia aéreo de alta manobrabilidade. Plana silenciosamente para escanear o terreno e mergulha em alta velocidade para atacar com suas lâminas de asa afiadas.",
-    "fraquezas": "Dano de Gelo",
-    "pontos_fortes": "Dano de Fogo",
+    "fraquezas": "Gelo",
+    "pontos_fortes": "Fogo",
     "img": "https://placehold.co/80"
   },
   {
@@ -121,8 +121,8 @@
     "tipo": "Combate",
     "caldeirao": "KAPPA",
     "descricao": "Um dos predadores mais letais do Oeste Proibido. Capaz de carregar ataques de plasma devastadores em seus espinhos dorsais para liberar feixes de energia concentrada.",
-    "fraquezas": "Dano de Gelo, Água de Enxarque",
-    "pontos_fortes": "Dano de Fogo, Choque, Ácido, Plasma",
+    "fraquezas": "Gelo, Água de Enxarque",
+    "pontos_fortes": "Fogo, Choque, Ácido, Plasma",
     "img": "https://placehold.co/80"
   },
   {
@@ -130,8 +130,8 @@
     "tipo": "Combate",
     "caldeirao": "KAPPA",
     "descricao": "Uma máquina serpentina de tamanho colossal. Combina velocidade surpreendente com a capacidade de cuspir ácido, eletrificar o solo e desferir ataques sônicos atordoantes.",
-    "fraquezas": "Dano de Fogo, Gelo, Plasma",
-    "pontos_fortes": "Dano de Choque, Água de Purga, Ácido",
+    "fraquezas": "Fogo, Gelo, Plasma",
+    "pontos_fortes": "Choque, Enxarque, Ácido",
     "img": "https://placehold.co/80"
   },
   {
@@ -139,17 +139,8 @@
     "tipo": "Combate",
     "caldeirao": "N/A",
     "descricao": "Drone de combate avançado de origem Far Zenith. Possui nanotecnologia que permite alterar sua forma, criando tentáculos e canhões de plasma adaptáveis.",
-    "fraquezas": "Dano de Ácido, Plasma",
-    "pontos_fortes": "Dano de Fogo, Choque, Água de Purga",
-    "img": "https://placehold.co/80"
-  },
-  {
-    "nome": "Espectro Prime (Specter Prime)",
-    "tipo": "Combate",
-    "caldeirao": "N/A",
-    "descricao": "Exoesqueleto único de tecnologia Zenith de ponta. Possui capacidades regenerativas avançadas e um arsenal versátil de armamento pesado.",
-    "fraquezas": "Dano de Ácido, Plasma",
-    "pontos_fortes": "Dano de Fogo, Choque, Água de Purga",
+    "fraquezas": "Ácido, Plasma",
+    "pontos_fortes": "Fogo, Choque, Enxarque",
     "img": "https://placehold.co/80"
   },
   {
@@ -157,8 +148,8 @@
     "tipo": "Aquisição",
     "caldeirao": "CHI",
     "descricao": "Especialista em suporte. Quando ameaçado, libera gases que fortalecem as máquinas aliadas próximas e enfraquecem a resistência dos inimigos.",
-    "fraquezas": "Dano de Fogo, Enxarque",
-    "pontos_fortes": "Dano de Choque",
+    "fraquezas": "Fogo, Enxarque",
+    "pontos_fortes": "Choque",
     "img": "https://placehold.co/80"
   },
   {
@@ -166,8 +157,8 @@
     "tipo": "Aquisição",
     "caldeirao": "GEMINI",
     "descricao": "Pterossauro mecânico com painéis solares nas asas. Acumula energia fotovoltaica para voos prolongados e pode disparar plasma. É passível de conversão para montaria.",
-    "fraquezas": "Dano da Água de Purga",
-    "pontos_fortes": "Dano de Plasma",
+    "fraquezas": "Enxarque",
+    "pontos_fortes": "Plasma",
     "img": "https://placehold.co/80"
   },
   {
@@ -175,8 +166,8 @@
     "tipo": "Aquisição",
     "caldeirao": "KAPPA",
     "descricao": "Máquina aquática de grande porte que filtra sedimentos. Utiliza discos giratórios para gerar escudos e disparar jatos de água pressurizada devastadores.",
-    "fraquezas": "Dano de Gelo, Choque",
-    "pontos_fortes": "Dano de Fogo, Enxarque",
+    "fraquezas": "Gelo, Choque",
+    "pontos_fortes": "Fogo, Enxarque",
     "img": "https://placehold.co/80"
   },
   {
@@ -184,8 +175,8 @@
     "tipo": "Combate",
     "caldeirao": "KAPPA",
     "descricao": "Uma fortaleza móvel inspirada em mamutes. Equipado com presas indestrutíveis, canhões e blindagem pesada, é frequentemente utilizado como máquina de guerra por tribos rebeldes.",
-    "fraquezas": "Dano de Gelo",
-    "pontos_fortes": "Dano de Fogo",
+    "fraquezas": "Gelo",
+    "pontos_fortes": "Fogo",
     "img": "https://placehold.co/80"
   },
   {
@@ -193,8 +184,8 @@
     "tipo": "Aquisição",
     "caldeirao": "MU",
     "descricao": "Máquina anfíbia robusta encontrada em rios. Sua mandíbula possui um mecanismo de vácuo capaz de sugar recursos ou lançar pedras explosivas contra adversários.",
-    "fraquezas": "Dano de Enxarque",
-    "pontos_fortes": "Dano de Fogo, Gelo, Choque, Ácido, Plasma",
+    "fraquezas": "Enxarque",
+    "pontos_fortes": "Fogo, Gelo, Choque, Ácido, Plasma",
     "img": "https://placehold.co/80"
   }
 ]

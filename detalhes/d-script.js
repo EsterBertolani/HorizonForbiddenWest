@@ -1,6 +1,12 @@
 const urlParams = new URLSearchParams(window.location.search);
 const categoria = urlParams.get('categoria');
 
+// Função para abrir/fechar o card (Adicione no início ou fim do arquivo)
+function toggleCard(elem) {
+    const card = elem.closest('.item-card');
+    card.classList.toggle('active');
+}
+
 async function carregarDetalhes() {
     const titulo = document.getElementById('title-category');
     const icone = document.getElementById('icon-category');
@@ -31,26 +37,38 @@ async function carregarDetalhes() {
 
         mostrarItens.forEach(item => {
             lista.innerHTML += `
-                <div class="item-horizontal">
-                    <img src="${item.img}" alt="${item.nome}" class="item-img">
-
-                    <div class="item-info">
-
-                        <div class="item-header">
-                            <h3>${item.nome}</h3>
-                            <span class="tag tipo">Tipo: ${item.tipo}</span>
-                            <span class="tag caldeirao">Caldeirão: ${item.caldeirao}</span>
+                <div class="item-card">
+                    
+                    <div class="card-header-view" onclick="toggleCard(this)">
+                        <div class="card-image-wrapper">
+                            <span class="tag-floating">${item.tipo}</span>
+                            <img src="${item.img}" alt="${item.nome}" class="item-img-full">
                         </div>
-
-                        <p>${item.descricao}</p>
-
-                        <div class="item-status">
-                            <span class="tag">Fraquezas: ${item.fraquezas}</span>
-                            <span class="tag">Forte contra: ${item.pontos_fortes}</span>
+                        
+                        <div class="card-preview-info">
+                            <h3>${item.nome}</h3>
+                            <button class="btn-toggle" onclick="toggleCard(this)">
+                                ▼
+                            </button>
                         </div>
                     </div>
+
+                    <div class="card-details-hidden">
+                        <div class="details-content">
+                            <span class="tag caldeirao">Caldeirão: ${item.caldeirao}</span>
+                            
+                            <p class="descricao">${item.descricao}</p>
+
+                            <div class="item-status">
+                                <span class="info-extra"><strong>Fraqueza:</strong> ${item.fraquezas}</span>
+                                <span class="info-extra"><strong>Vantagem:</strong> ${item.pontos_fortes}</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             `;
+            
         });
 
     } catch (error) {
