@@ -1,52 +1,61 @@
 const urlParams = new URLSearchParams(window.location.search);
 const categoria = urlParams.get('categoria');
 
-const bancoDeDados = { // só para simulação
-    "Máquinas": [
-        { nome: "Vigia", tipo: "Reconhecimento", desc: "Pequeno e ágil, alerta os outros.", img: "https://placehold.co/80" },
-        { nome: "Tirânico", tipo: "Combate", desc: "O ápice das máquinas de combate.", img: "https://placehold.co/80" }
-    ],
-    "Tribos": [
-        { nome: "Nora", tipo: "Caçadores", desc: "Vivem nas montanhas sagradas.", img: "https://placehold.co/80" },
-        { nome: "Carja", tipo: "Sol", desc: "Adoradores do Sol.", img: "https://placehold.co/80" }
-    ]
-};
-
-function carregarDetalhes() {
+async function carregarDetalhes() {
     const titulo = document.getElementById('title-category');
     const icone = document.getElementById('icon-category');
     const lista = document.getElementById('lista-itens');
 
-    if (!categoria) {
-        titulo.innerText = "Categoria não encontrada";
+    if (categoria) {
+        titulo.innerText = categoria;
+        icone.innerHTML = `<h1>${categoria.charAt(0)}</h1>`;
+    } else {
+        titulo.innerText = "Categoria não definida";
         return;
     }
 
-    titulo.innerText = categoria;
+    try {
+        const response = await fetch('../data/data-maquinas.json');
+        const maquinas = await response.json();
 
-    icone.innerHTML = `<h1>${categoria.charAt(0)}</h1>`;
+        let mostrarItens = [];
 
-    const itens = bancoDeDados[categoria];
+        if (categoria === "Máquinas") {
+            mostrarItens = maquinas;
+        } else {
+            lista.innerHTML = "<p>Conteúdo desta categoria em breve...</p>";
+            return;
+        }
 
-    if (!itens) {
-        lista.innerHTML = "<p>Em breve adicionaremos mais conteúdo aqui!</p>"
-        return;
-    }
+        lista.innerHTML = "";
 
-    lista.innerHTML = "";
-    itens.forEach(item => {
-        lista.innerHTML += `
-            <div class="item-horizontal">
-                <img src="${item.img}" alt="${item.nome}" class="item-img">
+        mostrarItens.forEach(item => {
+            lista.innerHTML += `
+                <div class="item-horizontal">
+                    <img src="${item.img}" alt="${item.nome}" class="item-img">
 
-                <div class="item-info">
-                    <h3>${item.nome}</h3>
-                    <span class=""tag>${item.tipo}</span>
-                    <p>${item.desc}</p>
+                    <div class="item-info">
+
+                        <div class="item-header">
+                            <h3>${item.nome}</h3>
+                            <span class="tag tipo">Tipo: ${item.tipo}</span>
+                            <span class="tag caldeirao">Caldeirão: ${item.caldeirao}</span>
+                        </div>
+
+                        <p>${item.descricao}</p>
+
+                        <div class="item-status">
+                            <span class="tag">Fraquezas: ${item.fraquezas}</span>
+                            <span class="tag">Forte contra: ${item.pontos_fortes}</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        `;
-    });
+            `;
+        });
+
+    } catch (error) {
+        console.error("Erro ao carregar os dados: ", error);
+    }
 }
 
 carregarDetalhes();

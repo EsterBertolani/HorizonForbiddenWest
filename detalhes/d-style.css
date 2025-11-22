@@ -184,7 +184,6 @@ div input:focus {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid var(--focus);
     display: flex;
-    /* Centraliza a letra dentro */
     align-items: center;
     justify-content: center;
     color: var(--focus);
@@ -210,7 +209,6 @@ div input:focus {
 
 .item-horizontal:hover {
     transform: translateX(10px);
-    /* Move para a direita ao passar o mouse */
     border-color: var(--focus);
 }
 
@@ -228,16 +226,61 @@ div input:focus {
     color: var(--primary-color);
 }
 
+.item-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
 .tag {
-    font-size: 0.8rem;
-    color: var(--focus);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag.tipo {
+    background-color: rgba(0, 217, 255, 0.15);
+    color: #00d9ff;
+    border: 1px solid #00d9ff;
+}
+
+.tag.caldeirao {
+    background-color: rgba(255, 165, 0, 0.15);
+    color: orange;
+    border: 1px solid orange;
+}
+
+.descricao {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.status-container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.info-extra {
+    margin: 5px 0;
+    color: #ddd;
+}
+
+.info-extra strong {
+    color: var(--focus);
 }
 
 .item-info p {
     margin: 0.5rem 0 0 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--tertiary-color);
+    margin-bottom: 8px;
 }

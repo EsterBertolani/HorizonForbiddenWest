@@ -217,6 +217,18 @@ section p {
     margin: 0 auto;
 }
 
+.card-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.card-link-wrapper h2,
+.card-link-wrapper p {
+    color: inherit;
+}
+
 article.card {
     background: rgba(30, 30, 30, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.1);
