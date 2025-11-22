@@ -1,0 +1,79 @@
+Anotações úteis para o projeto:
+
+npm start 
+
+no cmd para gerar dados no nodejs
+
+_________________________________________________________________________________________________________________________________________
+
+Créditos
+
+Fórmula Padrão (Camada Dupla):
+
+A estrutura ideal para qualquer crédito é: 
+
+	[O que você usou] criado por [Nome do Artista da Comunidade], baseado na propriedade intelectual de ``.
+
+
+Para Sites, Apps ou Portfólios (Rodapé ou Página "Sobre"):
+
+Texto Sugerido: 
+
+
+	"Este é um projeto sem fins lucrativos de fã. Design de Interface e Ícones Originais © Guerrilla Games & Sony Interactive Entertainment.
+
+	Créditos de Recursos:
+
+	Vetorização de Ícones de Máquinas: (via DeviantArt).
+	Fonte 'Horizon': JoannaVu.
+	Ícones de UI Adicionais:.
+	Este projeto não é afiliado, endossado ou patrocinado pela Sony ou Guerrilla Games."
+
+
+Para Projetos de Código (GitHub/README.md):
+
+Readme.md ou arquivo Credits.txt
+
+	Credits and Legal
+
+	This is a non-commercial fan project.
+	Intellectual Property: Horizon Zero Dawn/Forbidden West logic and designs are property of Guerrilla Games and Sony Interactive Entertainment.
+
+	Assets Used:
+
+	Machine Icons Vector Pack by(link-para-o-perfil-dele)
+	UI Kit Vectors by(link-para-o-perfil-dele)
+	Horizon Font by JoannaVu
+
+
+Mais profissional:
+
+	Design de Ícones e Interface: Liselore Goedhart (Lizzywanders) para Guerrilla Games. Fonte das Imagens: Portfólio de Lizzywanders 	(lizzywanders.dunked.com). Propriedade Intelectual: © Sony Interactive Entertainment.
+
+
+Virtual photography (minhas fotos do horizon):
+
+A Legenda "Padrão da Indústria" (Recomendada)
+Essa é a forma mais usada por fotógrafos virtuais no Twitter/X e Instagram. Ela é clara e respeitosa.
+
+	"Fotografia Virtual por. Jogo: Horizon Forbidden West (Guerrilla Games)."
+
+2. A Legenda "Estilo Portfólio" (Mais Limpa)
+Se o foco do seu projeto é o design e a imagem é apenas ilustrativa, use algo mais discreto no rodapé ou numa nota lateral.
+
+	"Captura in-game realizada por no Modo Fotografia de Horizon Forbidden West."
+
+3. A Legenda "Curta" (Para Redes Sociais)
+Se o espaço for pequeno:
+
+	"VP: | © Guerrilla Games"
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+SITES:
+
+https://magazine.artstation.com/2022/05/guerrilla-horizon-forbidden-west-art-blast/
+
+https://lizzywanders.dunked.com/horizon-forbidden-west
+
